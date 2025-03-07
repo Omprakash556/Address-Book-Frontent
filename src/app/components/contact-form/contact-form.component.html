@@ -1,0 +1,36 @@
+<div class="card p-3">
+    <h4 class="text-center">Person Address Form</h4>
+    <form (ngSubmit)="saveContact()">
+        <div class="mb-2">
+            <label>Full Name</label>
+            <input type="text" class="form-control" [(ngModel)]="contact.fullName" name="fullName" required>
+        </div>
+        <br>
+        <div class="mb-2">
+            <label>Phone Number</label>
+            <input type="text" class="form-control" [(ngModel)]="contact.phoneNumber" name="phoneNumber" required>
+        </div><br>
+        <div class="mb-2">
+            <label>Address</label>
+            <input type="text" class="form-control" [(ngModel)]="contact.address" name="address" required>
+        </div><br>
+        <div class="row">
+            <div class="col-md-4">
+                <label>City</label>
+                <input type="text" class="form-control" [(ngModel)]="contact.city" name="city" required>
+            </div><br>
+            <div class="col-md-4">
+                <label>State</label>
+                <input type="text" class="form-control" [(ngModel)]="contact.state" name="state" required>
+            </div><br>
+            <div class="col-md-4">
+                <label>Zip Code</label>
+                <input type="text" class="form-control" [(ngModel)]="contact.zipCode" name="zipCode" required>
+            </div><br>
+        </div>
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-secondary" (click)="cancel.emit()">Cancel</button>
+        </div>
+    </form>
+</div>
